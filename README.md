@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Digilabss — Landing Page
 
-## Getting Started
+Apple-style one-page marketing site for Digilabss, a performance marketing
+agency. Built for the Digilabss landing page developer hiring assignment.
 
-First, run the development server:
+## Stack
+
+- Next.js (App Router) + TypeScript
+- Tailwind CSS v4
+- Framer Motion for scroll-triggered reveals and micro-interactions
+
+## Getting started
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Environment variables
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Copy `.env.example` to `.env.local` and fill in as needed:
 
-## Learn More
+- `NEXT_PUBLIC_GTM_ID` — Google Tag Manager container ID. When set, the GTM
+  snippet is injected in `src/app/layout.tsx` and a mock GA4 event
+  (`generate_lead`) plus a mock Meta Pixel `track` call fire on lead form
+  submit (see `src/lib/analytics.ts`).
+- `LEAD_WEBHOOK_URL` — optional webhook (e.g. a Google Apps Script Web App
+  bound to a Sheet) that `/api/lead` forwards every submission to.
 
-To learn more about Next.js, take a look at the following resources:
+## Lead capture
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The "Book a call" form (`src/components/LeadForm.tsx`) does client-side
+validation, then POSTs to `src/app/api/lead/route.ts`, which:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Validates the payload server-side.
+2. Logs the lead (`console.log`) — visible in `npm run dev` output or your
+   host's function logs.
+3. Appends it to a local JSON-lines file for local verification.
+4. Optionally forwards it to `LEAD_WEBHOOK_URL` if set.
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deploy to Vercel (recommended, zero-config for Next.js):
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+npx vercel
+```
+
+Or connect the GitHub repo directly in the Vercel dashboard for automatic
+deploys on push to `main`.
+
+## Strategy note
+
+See [STRATEGY.md](./STRATEGY.md) for the write-up on how the full service
+story was condensed into a single scroll while keeping the page fast.
