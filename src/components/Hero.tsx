@@ -30,7 +30,7 @@ export default function Hero() {
         variants={container}
         initial="hidden"
         animate="visible"
-        className="mx-auto flex max-w-4xl flex-col items-center text-center"
+        className="mx-auto flex max-w-3xl flex-col items-center text-center lg:max-w-5xl"
       >
         <motion.span
           variants={item}
@@ -41,7 +41,7 @@ export default function Hero() {
 
         <motion.h1
           variants={item}
-          className="text-balance text-5xl font-semibold leading-[1.05] tracking-tight sm:text-7xl"
+          className="text-balance text-5xl font-semibold leading-[1.05] tracking-tight sm:text-7xl lg:text-8xl"
         >
           Growth that looks
           <br />
@@ -50,7 +50,7 @@ export default function Hero() {
 
         <motion.p
           variants={item}
-          className="mt-6 max-w-xl text-balance text-lg text-muted sm:text-xl"
+          className="mt-6 max-w-xl text-balance text-lg text-muted sm:text-xl lg:max-w-2xl lg:text-2xl"
         >
           Digilabss plans, creates, and buys performance media for businesses
           across the US, UK, and beyond — one continuous system, not a bundle
@@ -59,17 +59,17 @@ export default function Hero() {
 
         <motion.div
           variants={item}
-          className="mt-10 flex flex-col items-center gap-4 sm:flex-row"
+          className="mt-10 flex flex-col items-center gap-4 sm:flex-row lg:mt-14"
         >
           <a
             href="#book-a-call"
-            className="rounded-full bg-foreground px-7 py-3 text-sm font-medium text-background transition hover:opacity-90"
+            className="rounded-full bg-foreground px-7 py-3 text-sm font-medium text-background transition hover:opacity-90 lg:px-8 lg:py-4 lg:text-base"
           >
             Book a call
           </a>
           <a
             href="#story"
-            className="text-sm text-muted underline underline-offset-4 transition hover:text-foreground"
+            className="text-sm text-muted underline underline-offset-4 transition hover:text-foreground lg:text-base"
           >
             See how it works
           </a>

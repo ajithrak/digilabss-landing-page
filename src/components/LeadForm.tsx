@@ -74,16 +74,16 @@ export default function LeadForm() {
   }
 
   return (
-    <section id="book-a-call" className="relative px-6 py-32 sm:py-40">
-      <div className="mx-auto grid max-w-5xl gap-16 sm:grid-cols-[0.9fr_1.1fr]">
+    <section id="book-a-call" className="relative px-6 py-32 sm:py-40 lg:px-12">
+      <div className="mx-auto grid max-w-6xl gap-16 sm:grid-cols-[0.9fr_1.1fr] lg:gap-24">
         <Reveal>
           <p className="text-sm uppercase tracking-[0.2em] text-muted">
             Get started
           </p>
-          <h2 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
+          <h2 className="mt-4 text-balance text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
             Book a call with the team.
           </h2>
-          <p className="mt-6 max-w-sm text-lg text-muted">
+          <p className="mt-6 max-w-sm text-lg text-muted lg:max-w-md lg:text-xl">
             Tell us where you are today. We&apos;ll reply within one business
             day with next steps, no automated sequences.
           </p>
