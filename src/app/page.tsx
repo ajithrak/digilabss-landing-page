@@ -7,10 +7,12 @@ import ProcessSteps from "@/components/ProcessSteps";
 import LeadForm from "@/components/LeadForm";
 import StickyCTA from "@/components/StickyCTA";
 import Footer from "@/components/Footer";
+import AnimatedBackground from "@/components/AnimatedBackground";
 
 export default function Home() {
   return (
     <div className="flex flex-1 flex-col">
+      <AnimatedBackground />
       <Nav />
       <main className="flex flex-1 flex-col">
         <Hero />

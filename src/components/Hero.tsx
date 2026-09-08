@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import AnimatedBackground from "./AnimatedBackground";
 
 const container = {
   hidden: {},
@@ -25,7 +24,6 @@ export default function Hero() {
       id="top"
       className="relative flex min-h-[85vh] items-center justify-center overflow-hidden px-6 pt-24 pb-16 sm:min-h-screen sm:pt-20 sm:pb-0"
     >
-      <AnimatedBackground />
       <motion.div
         variants={container}
         initial="hidden"

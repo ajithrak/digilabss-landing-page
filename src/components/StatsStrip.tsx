@@ -37,7 +37,7 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 
 export default function StatsStrip() {
   return (
-    <section className="relative border-y border-border px-6 py-12 sm:py-20 lg:px-12 lg:py-32">
+    <section className="relative px-6 py-12 sm:py-20 lg:px-12 lg:py-32">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
