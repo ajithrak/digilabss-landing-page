@@ -35,7 +35,7 @@ const pillars = [
 
 export default function StoryWhat() {
   return (
-    <section id="story" className="relative px-6 py-16 sm:py-28 lg:px-12 lg:py-40">
+    <section id="story" className="relative px-6 py-8 sm:py-14 lg:px-12 lg:py-20">
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <p className="text-sm uppercase tracking-[0.2em] text-muted">
