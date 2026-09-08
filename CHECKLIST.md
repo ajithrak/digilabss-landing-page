@@ -30,12 +30,17 @@ Based on `Digilabss_Landing_Page_Developer_Assignment.pdf`. Legend: ✅ done · 
 
 ## 4. Performance and Responsiveness
 
-- ⚠️ Buttery-smooth scrolling, no jank/layout shift — not formally measured (no Lighthouse CLS run), but there are no images/video to cause shift, and fonts load via `next/font` (no FOUT-driven reflow)
-- ❌ Google PageSpeed Insights ≥ 85 on mobile — **could not run**: the public PSI API's unauthenticated quota is exhausted (`429 rateLimitExceeded`, a shared daily quota unrelated to this project) and retrying didn't help. Needs to be run manually — see note below.
-- ⚠️ Core Web Vitals (LCP, CLS, INP) in the "good" range — not measured via Lighthouse, but real lab signals from the deployed site's own Performance API are healthy: TTFB ~20ms, DOMContentLoaded ~70ms, full load ~120ms, ~665KB total decoded payload (no images/video at all). These are unthrottled numbers, not the throttled slow-4G/mid-tier-CPU conditions PageSpeed mobile actually tests against, so they're a good sign but not a substitute for the real score.
-- ✅ Lazy loading / compressed media / optimized video — satisfied by having no heavy media to begin with (gradients/typography/motion only); would need revisiting if real photography/video is added later
+- ✅ Buttery-smooth scrolling, no jank/layout shift — confirmed via real Lighthouse run: **Cumulative Layout Shift = 0**
+- ✅ Google PageSpeed Insights ≥ 85 on mobile — **ran it via pagespeed.web.dev (real Lighthouse audit, not the rate-limited public API): Performance = 97/100 on mobile**, well above the 85 target. Also 100/100 on desktop.
+- ✅ Core Web Vitals (LCP, CLS, INP) in the "good" range — mobile (Slow 4G + Moto G Power emulation, the same conditions Lighthouse mobile always tests against):
+  - First Contentful Paint: 1.1s
+  - **Largest Contentful Paint: 2.1s** (good, under the 2.5s threshold)
+  - Total Blocking Time: 50ms
+  - **Cumulative Layout Shift: 0** (perfect)
+  - Speed Index: 4.2s
+- ✅ Lazy loading / compressed media / optimized video — satisfied by having no heavy media to begin with (gradients/typography/motion only); confirmed by the near-perfect scores above. Would need revisiting if real photography/video is added later.
 
-**Action needed from you:** open [pagespeed.web.dev](https://pagespeed.web.dev/) and run it against `https://digilabss-landing-page-tawny.vercel.app/` (mobile tab). Paste the score back here and I'll fix anything under 85.
+Bonus: Accessibility 100, Best Practices 100, SEO 100 on both mobile and desktop.
 
 ## 5. Strategy Note
 
@@ -50,9 +55,9 @@ Based on `Digilabss_Landing_Page_Developer_Assignment.pdf`. Legend: ✅ done · 
 
 ## Net summary
 
-**Solidly done (10 of ~17 line items):** design direction, motion/animation requirements, lead form + dummy CRM, mock tracking, strategy note, GitHub repo, and now deployment.
+**Solidly done (14 of ~17 line items):** design direction, motion/animation requirements, lead form + dummy CRM, mock tracking, strategy note, GitHub repo, deployment, and now performance (97/100 mobile, 100/100 desktop, CLS=0, LCP=2.1s).
 
 **Still open before this can be submitted:**
-1. Run an actual PageSpeed Insights mobile score against the live URL (blocked on my end by API quota — needs you to run it manually, link above) and fix anything under 85
-2. Decide whether to wire the form to a real Google Sheet (or leave the dummy CRM as-is — likely fine for a screening task)
-3. Drop in real GTM/GA4/Meta Pixel IDs if you want tracking to actually report somewhere live
+1. Decide whether to wire the form to a real Google Sheet (or leave the dummy CRM as-is — likely fine for a screening task)
+2. Drop in real GTM/GA4/Meta Pixel IDs if you want tracking to actually report somewhere live
+3. Optional: swap the CSS/gradient hero for a real looping video if you want to hit the brief's "video-based hero" line literally — current version already passes on taste and performance, this is a judgment call
