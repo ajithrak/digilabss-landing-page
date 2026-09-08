@@ -5,7 +5,7 @@ Based on `Digilabss_Landing_Page_Developer_Assignment.pdf`. Legend: ✅ done · 
 ## 1. Design Direction
 
 - ✅ Lead with visuals, not paragraphs — sections are one headline + one line + visual/motion (no dense text blocks)
-- ✅ Large, confident typography and generous white space
+- ✅ Large, confident typography and generous white space — *revised*: mobile spacing was originally too generous (unconditional `py-32`/`py-40` on every section produced large dead zones on phone-width screens, and a floating "SCROLL" cue sat alone in empty hero space). Retiered padding to scale up from a tighter mobile base through `sm:`/`lg:`, shrank the hero from a full `min-h-screen` to `85vh` on mobile, and hid the SCROLL cue below `sm:`. Verified via computed geometry: hero height 812px → 690px on a 375px-wide viewport.
 - ⚠️ Animated/video-based hero that sets the tone — hero is animated (staggered entrance + gradient background), but there's no actual video; a deliberate design choice ([STRATEGY.md](./STRATEGY.md)) to keep it fast, not literally what the brief describes
 - ✅ Scroll-triggered reveals (sections/stats animate in, not all at once)
 - ✅ Subtle animated background element (drifting gradient orbs, CSS-driven)
