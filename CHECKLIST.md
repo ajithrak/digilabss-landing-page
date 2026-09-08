@@ -23,8 +23,7 @@ Based on `Digilabss_Landing_Page_Developer_Assignment.pdf`. Legend: ✅ done · 
 ## 3. Functionality
 
 - ✅ Working "Book a Call" lead form (name, email, company, budget range) with client-side validation
-- ✅ Dummy CRM integration — `/api/lead` validates server-side, logs every submission, and appends to a local file; verified end-to-end with a real test submission
-  - ⚠️ Brief also mentions "or Google Sheet" — form supports forwarding to a webhook URL (`LEAD_WEBHOOK_URL`, e.g. a Google Apps Script Sheet endpoint) but this hasn't been wired to an actual live Sheet
+- ✅ CRM integration — `/api/lead` validates server-side, logs every submission, and forwards it to a real **Google Sheet** via a Google Apps Script web app (`LEAD_WEBHOOK_URL`); verified end-to-end with a live test submission on the deployed site — the row actually landed in the Sheet ([script source](./scripts/google-apps-script-lead-webhook.gs))
 - ✅ Basic tracking scaffolding — GTM container injection + mock GA4 (`generate_lead` dataLayer event) + mock Meta Pixel call on form submit, confirmed firing in testing
   - ⚠️ No real GTM/GA4/Pixel IDs are configured yet (env vars are empty by default) — needs real container IDs before it's live-trackable
 
@@ -55,9 +54,10 @@ Bonus: Accessibility 100, Best Practices 100, SEO 100 on both mobile and desktop
 
 ## Net summary
 
-**Solidly done (14 of ~17 line items):** design direction, motion/animation requirements, lead form + dummy CRM, mock tracking, strategy note, GitHub repo, deployment, and now performance (97/100 mobile, 100/100 desktop, CLS=0, LCP=2.1s).
+**Solidly done (15 of ~17 line items):** design direction, motion/animation requirements, lead form + real Google Sheet CRM integration, mock tracking, strategy note, GitHub repo, deployment, and performance (97/100 mobile, 100/100 desktop, CLS=0, LCP=2.1s).
 
-**Still open before this can be submitted:**
-1. Decide whether to wire the form to a real Google Sheet (or leave the dummy CRM as-is — likely fine for a screening task)
-2. Drop in real GTM/GA4/Meta Pixel IDs if you want tracking to actually report somewhere live
-3. Optional: swap the CSS/gradient hero for a real looping video if you want to hit the brief's "video-based hero" line literally — current version already passes on taste and performance, this is a judgment call
+**Still open — both optional judgment calls:**
+1. Drop in real GTM/GA4/Meta Pixel IDs if you want tracking to actually report somewhere live (currently mocked, confirmed firing correctly)
+2. Optional: swap the CSS/gradient hero for a real looping video if you want to hit the brief's "video-based hero" line literally — current version already passes on taste and performance, this is a judgment call
+
+At this point the assignment is functionally complete and ready to submit.
