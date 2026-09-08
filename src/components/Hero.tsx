@@ -23,7 +23,7 @@ export default function Hero() {
   return (
     <section
       id="top"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden px-6 pt-20"
+      className="relative flex min-h-[85vh] items-center justify-center overflow-hidden px-6 pt-24 pb-16 sm:min-h-screen sm:pt-20 sm:pb-0"
     >
       <AnimatedBackground />
       <motion.div
@@ -80,7 +80,7 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.2, duration: 0.8 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 text-xs tracking-[0.2em] text-muted"
+        className="absolute bottom-8 left-1/2 hidden -translate-x-1/2 text-xs tracking-[0.2em] text-muted sm:block"
       >
         SCROLL
       </motion.div>

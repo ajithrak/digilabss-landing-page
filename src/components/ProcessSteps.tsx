@@ -20,7 +20,7 @@ const steps = [
 
 export default function ProcessSteps() {
   return (
-    <section className="relative px-6 py-32 sm:py-40 lg:px-12">
+    <section className="relative px-6 py-16 sm:py-28 lg:px-12 lg:py-40">
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <p className="text-sm uppercase tracking-[0.2em] text-muted">
@@ -31,7 +31,7 @@ export default function ProcessSteps() {
           </h2>
         </Reveal>
 
-        <div className="relative mt-20">
+        <div className="relative mt-12 sm:mt-20">
           <div className="absolute left-0 right-0 top-7 hidden h-px bg-border sm:block" />
           <div className="grid gap-12 sm:grid-cols-3 lg:gap-20">
             {steps.map((s, i) => (

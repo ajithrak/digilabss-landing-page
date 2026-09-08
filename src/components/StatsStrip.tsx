@@ -37,13 +37,13 @@ function Counter({ value, suffix }: { value: number; suffix: string }) {
 
 export default function StatsStrip() {
   return (
-    <section className="relative border-y border-border px-6 py-24 lg:px-12 lg:py-32">
+    <section className="relative border-y border-border px-6 py-12 sm:py-20 lg:px-12 lg:py-32">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6 }}
-        className="mx-auto grid max-w-6xl grid-cols-2 gap-y-12 sm:grid-cols-4"
+        className="mx-auto grid max-w-6xl grid-cols-2 gap-y-8 sm:gap-y-12 sm:grid-cols-4"
       >
         {stats.map((stat) => (
           <div key={stat.label} className="text-center">

@@ -74,8 +74,8 @@ export default function LeadForm() {
   }
 
   return (
-    <section id="book-a-call" className="relative px-6 py-32 sm:py-40 lg:px-12">
-      <div className="mx-auto grid max-w-6xl gap-16 sm:grid-cols-[0.9fr_1.1fr] lg:gap-24">
+    <section id="book-a-call" className="relative px-6 py-16 sm:py-28 lg:px-12 lg:py-40">
+      <div className="mx-auto grid max-w-6xl gap-12 sm:grid-cols-[0.9fr_1.1fr] sm:gap-16 lg:gap-24">
         <Reveal>
           <p className="text-sm uppercase tracking-[0.2em] text-muted">
             Get started

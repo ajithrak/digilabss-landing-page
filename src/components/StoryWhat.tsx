@@ -17,7 +17,7 @@ const pillars = [
 
 export default function StoryWhat() {
   return (
-    <section id="story" className="relative px-6 py-32 sm:py-40 lg:px-12">
+    <section id="story" className="relative px-6 py-16 sm:py-28 lg:px-12 lg:py-40">
       <div className="mx-auto max-w-6xl">
         <Reveal>
           <p className="text-sm uppercase tracking-[0.2em] text-muted">
@@ -30,7 +30,7 @@ export default function StoryWhat() {
           </h2>
         </Reveal>
 
-        <div className="mt-20 grid gap-16 border-t border-border pt-16 sm:grid-cols-3 lg:gap-20 lg:pt-20">
+        <div className="mt-12 grid gap-10 border-t border-border pt-10 sm:mt-20 sm:grid-cols-3 sm:pt-16 lg:mt-20 lg:gap-20 lg:pt-20">
           {pillars.map((pillar, i) => (
             <Reveal key={pillar.label} delay={i * 0.1}>
               <span className="text-xs text-muted">0{i + 1}</span>
