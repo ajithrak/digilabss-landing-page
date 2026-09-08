@@ -75,7 +75,7 @@ export default function LeadForm() {
 
   return (
     <section id="book-a-call" className="relative px-6 py-8 sm:py-14 lg:px-12 lg:py-20">
-      <div className="mx-auto grid max-w-6xl gap-12 sm:grid-cols-[0.9fr_1.1fr] sm:gap-16 lg:gap-24">
+      <div className="mx-auto grid max-w-6xl gap-12 sm:grid-cols-[0.9fr_1.1fr] sm:gap-16 xl:max-w-[min(96rem,90vw)] lg:gap-24">
         <Reveal>
           <p className="text-sm uppercase tracking-[0.2em] text-muted">
             Get started
@@ -91,14 +91,14 @@ export default function LeadForm() {
 
         <Reveal delay={0.1}>
           {status === "success" ? (
-            <div className="rounded-2xl border border-border p-8">
+            <div className="max-w-md rounded-2xl border border-border p-8">
               <h3 className="text-xl font-medium">Request received.</h3>
               <p className="mt-2 text-muted">
                 Thanks — someone from the team will reach out shortly.
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} noValidate className="space-y-5">
+            <form onSubmit={handleSubmit} noValidate className="max-w-md space-y-5">
               <div className="grid gap-5 sm:grid-cols-2">
                 <Field
                   label="Name"

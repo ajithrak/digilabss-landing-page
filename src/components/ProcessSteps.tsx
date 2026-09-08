@@ -38,7 +38,7 @@ const steps = [
 export default function ProcessSteps() {
   return (
     <section className="relative px-6 py-8 sm:py-14 lg:px-12 lg:py-20">
-      <div className="mx-auto max-w-6xl">
+      <div className="mx-auto max-w-6xl xl:max-w-[min(96rem,90vw)]">
         <Reveal>
           <p className="text-sm uppercase tracking-[0.2em] text-muted">
             How to start

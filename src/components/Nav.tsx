@@ -10,7 +10,7 @@ export default function Nav() {
       transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
       className="fixed inset-x-0 top-0 z-40 border-b border-border/60 bg-background/70 backdrop-blur-xl"
     >
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 xl:max-w-[min(96rem,90vw)] lg:px-12">
         <a href="#top" className="text-sm font-semibold tracking-tight">
           Digilabss
         </a>

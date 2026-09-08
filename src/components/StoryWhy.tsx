@@ -6,7 +6,7 @@ import Reveal from "./Reveal";
 export default function StoryWhy() {
   return (
     <section className="relative overflow-hidden px-6 py-8 sm:py-14 lg:px-12 lg:py-20">
-      <div className="mx-auto grid max-w-6xl items-center gap-12 sm:grid-cols-[1.1fr_0.9fr] sm:gap-16 lg:gap-24">
+      <div className="mx-auto grid max-w-6xl items-center gap-12 sm:grid-cols-[1.1fr_0.9fr] sm:gap-16 xl:max-w-[min(96rem,90vw)] lg:gap-24">
         <Reveal>
           <p className="text-sm uppercase tracking-[0.2em] text-muted">
             Why it matters

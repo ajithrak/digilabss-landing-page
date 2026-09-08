@@ -43,7 +43,7 @@ export default function StatsStrip() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6 }}
-        className="mx-auto grid max-w-6xl grid-cols-2 gap-y-8 sm:gap-y-12 sm:grid-cols-4"
+        className="mx-auto grid max-w-6xl grid-cols-2 gap-y-8 sm:gap-y-12 sm:grid-cols-4 xl:max-w-[min(96rem,90vw)]"
       >
         {stats.map((stat) => (
           <div key={stat.label} className="text-center">

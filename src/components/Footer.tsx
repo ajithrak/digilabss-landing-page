@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="border-t border-border px-6 py-10 lg:px-12">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-sm text-muted sm:flex-row">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-sm text-muted sm:flex-row xl:max-w-[min(96rem,90vw)]">
         <span>© {new Date().getFullYear()} Digilabss. All rights reserved.</span>
         <a href="#top" className="transition hover:text-foreground">
           Back to top
